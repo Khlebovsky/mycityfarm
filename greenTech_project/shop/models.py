@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Product(models.Model):
+    category = models.CharField(u'Категория', max_length=50, default="no category")
     title = models.CharField(u'Название', max_length=250)
     descritpion = models.TextField(u'Описание')
     price = models.CharField(u'Стоимость', max_length=50)

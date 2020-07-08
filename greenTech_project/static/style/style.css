@@ -1804,6 +1804,100 @@ body .article a:hover {
   color: #4B8138;
 }
 
+body .shop {
+  padding-left: 150px;
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #444444;
+  font-family: 'Helvetica regular';
+  position: relative;
+}
+
+body .shop .green-1 {
+  position: absolute;
+  left: 200px;
+  top: 50px;
+}
+
+body .shop h1 {
+  font-size: 4em;
+}
+
+body .shop .product-wrapper {
+  margin-top: 100px;
+  max-width: 1000px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .shop .product-wrapper .product {
+  color: #444444;
+  max-width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .shop .product-wrapper .product img {
+  width: 300px;
+}
+
+body .shop .product-wrapper .product h2 {
+  margin-top: 50px;
+  font-size: 2em;
+}
+
+body .shop .product-wrapper .product span {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+body .shop .product-wrapper .product strong {
+  margin-top: 10px;
+  font-size: 1.8em;
+}
+
+body .shop .product-wrapper .product button {
+  width: 200px;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 0;
+}
+
+body .shop .product-wrapper .product button:hover {
+  background: #f9f9f9;
+}
+
+body .shop .product-wrapper .product button:active {
+  background: #ccc;
+}
+
 @-webkit-keyframes swipe {
   0% {
     right: 200px;

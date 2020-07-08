@@ -1,5 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 Онлайн-магазин
+{% endblock %}
+
+{% block content %}
+<div class="shop">
+    <img class="green-1" src="{% static 'img/green-1.png' %}">
+    <h1>Online shop</h1>
+    <div class="product-wrapper">
+        {% for product in object_list %}
+            <div class="product">
+                <img src="{{ product.image.url }}" alt="">
+                <h2>{{ product.title }}</h2>
+                <span>{{ product.descritpion }}</span>
+                <strong>{{ product.price }} P.</strong>
+                <button id="buy" onclick="alert('Продажа временно приостановлена')">Купить</button>
+            </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

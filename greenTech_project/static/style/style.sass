@@ -1085,6 +1085,57 @@ body
             color: $dark
             &:hover
                 color: $green
+    .shop 
+        padding-left: 150px
+        padding-top: 100px
+        display: flex
+        flex-direction: column
+        align-items: center
+        color: $dark
+        font-family: 'Helvetica regular'
+        position: relative
+        .green-1
+            position: absolute
+            left: 200px
+            top: 50px
+        h1 
+            font-size: 4em
+        .product-wrapper
+            margin-top: 100px
+            max-width: 1000px
+            flex-wrap: wrap
+            display: flex
+            justify-content: space-between
+            .product
+                color: $dark
+                max-width: 300px
+                display: flex
+                flex-direction: column 
+                align-items: flex-start
+                img 
+                    width: 300px
+                h2 
+                    margin-top: 50px
+                    font-size: 2em
+                span 
+                    margin-top: 10px
+                    font-size: 1.5em
+                strong 
+                    margin-top: 10px
+                    font-size: 1.8em
+                button 
+                    width: 200px
+                    font-size: 1.5em 
+                    padding: 10px 20px 
+                    margin-top: 20px
+                    cursor: pointer
+                    background: #fff
+                    border: 2px solid #000
+                    border-radius: 0
+                    &:hover
+                        background: #f9f9f9
+                    &:active
+                        background: #ccc
 @keyframes swipe
     0%
         right: 200px
