@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Личный кабинет
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<div class="cabinet">
+    <header>
+        <div class="text">
+            <h1>Личный кабинет</h1>
+            <small>Панель управления фермой <a href="#" class="name">{{ user.username }}</a></small>
+        </div>
+        <span>
+            Не подключено устройство
+        </span>
+        <div class="text">
+            <h2>Ваша статистика</h2>
+            <small>Сбор статистики и оптимальных показателей</small>
+        </div>
+    </header>
+    <div class="info">
+        <div class="panel">
+            <div class="actions">
+                <div class="action temp active">
+                    <div class="icon">
+                        <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
+                    </div>
+                    <span>
+                        температура
+                    </span>
+                </div>
+                <div class="action timer">
+                    <div class="icon">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    </div>
+                    <span>
+                        таймер
+                    </span>
+                </div>
+                <div class="action light">
+                    <div class="icon">
+                        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                    </div>
+                    <span>
+                        свет
+                    </span>
+                </div>
+                <div class="action repeat">
+                    <div class="icon">
+                        <i class="fa fa-repeat" aria-hidden="true"></i>
+                    </div>
+                    <span>
+                        повтор
+                    </span>
+                </div>
+                <div class="action humidity">
+                    <div class="icon">
+                        <i class="fa fa-tint" aria-hidden="true"></i>
+                    </div>
+                    <span>
+                        влажность
+                    </span>
+                </div>
+                <div class="action sleep">
+                    <div class="icon">
+                        <i class="fa fa-moon-o" aria-hidden="true"></i>
+                    </div>
+                    <span>
+                        сон
+                    </span>
+                </div>
+                <div class="action add">
+                    <div class="icon">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <span>
+                        подключить
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="statistic">
+            
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="not-logged">
+    <div class="name">
+        <img src="{% static 'img/logo.png' %}">
+        <span>
+            My City Farm
+            <small>GT</small>
+        </span>
+    </div>
+    <span>Вы не вошли в свой аккаунт</span>
+    <div class="links">
+        <a href="{% url 'login' %}">Войти</a>
+        <a href="{% url 'registr' %}">Создать аккаунт</a>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

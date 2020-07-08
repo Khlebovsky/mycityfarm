@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Главная
+{% endblock %}
+
+{% block content %}
+<div class="scrolling-wrapper" id="horizontal-scroller">
+    <div class="card card-left">
+        <div class="name">
+            <img class="green-1" src="{% static 'img/green-1.png' %}">
+            <img src="{% static 'img/logo.png' %}">
+            <span>
+                My City Farm
+                <small>GT</small>
+            </span>
+        </div>
+        <span class="main-text">
+            Уникальный сервис поддержки и развития <strong>сити-ферм</strong>
+            <img class="green-2" src="{% static 'img/green-2.png' %}">
+        </span>
+        <a href="{% url 'details' %}" class="more">
+            <hr>
+            Подробнее
+        </a>
+        <div class="swipe">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </div>
+        <div class="left-block"></div>
+        <div class="inside-block"></div>
+    </div>
+    <div class="card card-right" id="scroll">
+        <div class="left-block"></div>
+        <div class="inside-block"></div>
+        <img class="green-3" src="{% static 'img/green-3.png' %}">
+        <img class="green-4" src="{% static 'img/green-4.png' %}">
+        <div class="name">
+            <img src="{% static 'img/logo.png' %}">
+            <span>
+                My City Farm
+                <small>GT</small>
+            </span>
+        </div>
+        <h1>
+            <img class="green-1" src="{% static 'img/green-1.png' %}">
+            Питаться полезно - вкусно!
+        </h1>
+        <small>Твоя городская технологичная ферма</small>
+        <span>
+            <strong>Городская ферма</strong> - шаг в здоровое будущее для себя и близких,
+            это возможность выращивать вкусную и экологически чистую культуру
+            и не покупать гектары земли, ведь тебе может хватить и команты!
+        </span>
+        <a href="{% url 'details' %}" class="more">
+            Подробнее
+            <hr>
+        </a>
+    </div>
+    <div class="card card-3">
+        <div class="content">
+            <img class="green-3" src="{% static 'img/green-3.png' %}">
+            <img class="green-4" src="{% static 'img/green-4.png' %}">
+            <div class="name">
+                <img src="{% static 'img/logo.png' %}">
+                <span>
+                    My City Farm
+                    <small>GT</small>
+                </span>
+            </div>
+            <h1>
+                Еда будущего уже сегодня?
+                <img class="green-1" src="{% static 'img/green-1.png' %}">
+            </h1>
+            <small>
+                Раскрой все возможности <span>микрозелени</span>
+            </small>
+            <span>
+                <strong>Микрозелень</strong> - уникальный продукт, содержащий высокую концентрацию витамин.
+                Помимо этого, повсеместо используется в рационе питания человека,
+                повышая его тонус.
+            </span>
+            <a href="{% url 'details' %}" class="more">
+                Подробнее
+            </a>
+        </div>
+    </div>
+    <div class="card card-4">
+        <div class="content">
+            <img class="green-1" src="{% static 'img/green-1.png' %}">
+            <img class="green-4" src="{% static 'img/green-4.png' %}">
+            <img class="green-3" src="{% static 'img/green-3.png' %}">
+            <div class="name">
+                <img src="{% static 'img/logo.png' %}">
+                <span>
+                    My City Farm
+                    <small>GT</small>
+                </span>
+            </div>
+            <h1>
+                Делаем сити-фермы доступными
+            </h1>
+            <small>
+                Качественная и экологичная продукия <span>доступнее</span>, чем тебе кажется
+            </small>
+            <div class="advantages">
+                <div class="left">
+                    <span>
+                        Мы создадим все нужные условия для того,
+                        чтобы ваша сити ферма работала исправно
+                    </span>
+                    <ul>
+                        <li>
+                            Встроенная система-энциклопедия, научит
+                            и расскажет как пользоваться сити-фермой
+                        </li>
+                        <li>
+                            Больше не нужно искать расходные материалы,
+                            в нашем сервисе встроеннный магазин, где
+                            вы сможете заказать всё, что понадобится
+                        </li>
+                        <li>
+                            Автоматизация управления фермой, теперь
+                            можно онлайн регулировать все показатели и
+                            следить за состоянием растений
+                        </li>
+                    </ul>
+                    <div class="links">
+                        <a href="{% url 'shop' %}" class="more">
+                            <hr>
+                            Магазин
+                        </a>
+                        <a href="{% url 'wiki' %}" class="more">
+                            <hr>
+                            Энциклопедия
+                        </a>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="img">
+                        <div class="text">
+                            <h2>
+                                Домашнее
+                                выращивание
+                            </h2>
+                            <span>
+                                Отличная возможность питаться
+                                здоровой пищей, выращенной
+                                дома. Отличный источник
+                                витаминов без добавок
+                            </span>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <div class="text">
+                            <h2>
+                                Предпринимателям
+                                и компаниям
+                            </h2>
+                            <span>
+                                Активно развивающаяся ниша
+                                в России и странах СНГ.
+                                Большое количество путей
+                                экспорта, высокий спрос
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card card-5">
+        <img class="green-3" src="{% static 'img/green-3.png' %}">
+        <div class="img"></div>
+        <div class="content">
+            <small>
+                Контакты
+            </small>
+            <h1>
+                <img class="green-1" src="{% static 'img/green-1.png' %}">
+                Не жди, действуй!
+            </h1>
+            <div class="links">
+                <a href="{% url 'registr' %}">
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    Регистрация в проекте <br>
+                    <strong>"Моя сити-ферма"</strong>
+                </a>
+                <a href="{% url 'wiki' %}">
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    Перейти в энциклопедию
+                </a>
+                <a href="{% url 'shop' %}">
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    Онлайн-магазин
+                </a>
+                <div class="name">
+                    <img src="{% static 'img/logo.png' %}">
+                    <span>
+                        My City Farm
+                        <small>GT</small>
+                    </span>
+                    <img class="green-4" src="{% static 'img/green-4.png' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

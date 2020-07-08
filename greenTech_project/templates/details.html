@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+My City Farm
+{% endblock %}
+
+{% block content %}
+<div class="details-wrapper">
+    <div class="block block-1">
+        <div class="img"></div>
+        <div class="content">
+            <small>Проект "Моя сити-ферма"</small>
+            <h1>Все нужные условия для твоей сити-фермы</h1>
+            <a href="#next">Продолжение</a>
+        </div>
+    </div>
+    <div class="block block-2">
+        <div class="content">
+            <img class="green-1" src="{% static 'img/green-1.png' %}">
+            <img class="green-2" src="{% static 'img/green-2.png' %}">
+            <span id="next">
+                Сервис <small>«Моя сити-ферма»</small> создаёт все необходимые
+                условия для развития вашей городской фермы.
+            </span>
+            <span>
+                <strong>Сити-фермерство</strong> — это выращивание продуктов
+                в городских условиях. Выращивать их можно как для себя,
+                чтобы разнообразить свой рацион, так и на продажу.
+            </span>
+            <p>
+                Стать сити-фермером может каждый — в отличии от обычного фермерства,
+                подобное занятие не потребует гектаров земли.
+            </p>
+        </div>
+    </div>
+    <div class="block block-3">
+        <div class="content">
+            <h1>
+                <img class="green-1" src="{% static 'img/green-1.png' %}">
+                Микрозелень - <br> шаг в здоровое будущее
+            </h1>
+            <span>
+                <strong>Микрозелень</strong> — молодые побеги растений, которые используются как в пищу,
+                так и для украшения блюд. Её используют в салатах, супах, коктейлях, смузи,
+                других напитках и блюдах. Из-за высокого содержания полезных веществ такая
+                пища считается очень перспективной, а её потребление неуклонно растёт.
+            </span>
+            <small>
+                В 100 гр. микрозелени легкоусвояемого белка больше, чем в 100 гр. мяса.
+            </small>
+            <span>
+                С технологией вертикальных ферм это стало доступно для любого человека.
+                Витрины можно установить дома, в подвале, на производственных площадях,
+                в торговом центре или на крыше здания!
+            </span>
+            <div class="links">
+                <a href="{% url 'shop' %}" class="more">
+                    <hr>
+                    Магазин семян
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/Микрозелень" class="more">
+                    <hr>
+                    Статья на Вики
+                </a>
+            </div>
+        </div>
+        <div class="img"></div>
+    </div>
+    <div class="block block-4">
+        <div class="img">
+            <img class="green-4" src="{% static 'img/green-4.png' %}">
+        </div>
+        <div class="content">
+            <h1>
+                Всё о твоей ферме <br>
+                прямиком в смартфоне!
+            </h1>
+            <span>
+                Управляй всеми параметрами своей сити-фермы онлайн,
+                регулируй температуру, влажность и свет одним кликом.
+            </span>
+            <span>
+                Не ищи магазины с семенами, компонентами и фермами.
+                Теперь всё можно приобрести в нашем онлайн-магазине.
+            </span>
+            <span>
+                Читай полезные гайды и статьи по грамотному
+                выращиванию растений и микрозелени.
+            </span>
+            <a href="{% url 'cabinet' %}" class="more">
+                <img class="green-1" src="{% static 'img/green-1.png' %}">
+                Личный кабинет
+                <hr>
+            </a>
+        </div>
+    </div>
+    <div class="block block-5" id="contacts">
+        <div class="top-text">
+            Контакты и ссылки
+        </div>
+        <div class="content">
+            <h1>
+                <img class="green-1" src="{% static 'img/green-1.png' %}">
+                Контакты и ссылки
+            </h1>
+            <div class="links">
+                <span>
+                    <div class="text">
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                        Регистрация в личном кабинете
+                    </div>
+                    <a href="{% url 'registr' %}">Перейти</a>
+                </span>
+                <span>
+                    <div class="text">
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                        Энциклопедия сити-фермы
+                    </div>
+                    <a href="{% url 'wiki' %}">Перейти</a>
+                </span>
+                <span>
+                    <div class="text">
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                        Онлайн-магазин
+                    </div>
+                    <a href="{% url 'shop' %}">Перейти</a>
+                </span>
+                <span>
+                    <div class="text">
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                        Twilightcreatestudio@yandex.ru
+                    </div>
+                    <a href="mailto:Twilightcreatestudio@yandex.ru">Написать</a>
+                </span>
+            </div>
+        </div>
+        <div class="img"></div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <script src="{% static 'lib/jquery-3.5.1.min.js' %}"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+
+    <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'lib/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <script src="{% static 'script/script.js' %}"></script>
+
+</head>
+
+<body>
+    <div class="menu">
+        <div class="close-menu">
+            <a href="#none" class="close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+        </div>
+        <div class="links">
+            <a href="{% url 'home' %}">Главная</a>
+            <a href="{% url 'details' %}">Подробнее</a>
+            <a href="{% url 'wiki' %}">Энциклопедия</a>
+            <a href="{% url 'shop' %}">Онлайн-магазин</a>
+            <a href="{% url 'details' %}#contacts">Контакты</a>
+            <a href="{% url 'cabinet' %}">Личный кабинет</a>
+        </div>
+        <div class="img"></div>
+        <div class="menu-bottom">
+            <div class="name">
+                <img src="{% static 'img/logo.png' %}">
+                <span>
+                    My City Farm
+                    <small>GT</small>
+                </span>
+                <img class="green-1" src="{% static 'img/green-1.png' %}">
+            </div>
+        </div>
+    </div>
+    <div class="left-menu">
+        <a href="{% url 'home' %}">
+            <div class="name">
+                <img src="{% static 'img/logo.png' %}">
+                <span>
+                    My City Farm
+                    <small>GT</small>
+                </span>
+            </div>
+        </a>
+        <a href="#none" class="open-menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
+        <a href="{% url 'details' %}#contacts">Контакты</a>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+
+</html>
