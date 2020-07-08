@@ -38,7 +38,6 @@ if(isset($_POST['register'])) {
 <input type="password" name="psswd2" required=""><br />
 <?php
 echo '<p style="color:red">'.$error_text.'</p>';
-//я ебал все в рот, даня просто знай это и всё, все гениальное ебется в жопу реально
 ?>
 <input type="submit" name="register" value="Создать аккаунт">
 </form>
