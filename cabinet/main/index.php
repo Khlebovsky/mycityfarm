@@ -23,9 +23,6 @@ if($_GET['action'] == '') {
 	else {
 		$light = 'выключен';
 	}
-	if($user_data['login'] == 'fort_dev' && $name == 'кирилл') {
-		$huy = 'пошел нахуй блять дебил';
-	}
 	mysqli_close($link);
 	if($_SESSION['success_text'] != '') {
 		$success_text = $_SESSION['success_text'];
@@ -40,7 +37,6 @@ if($_GET['action'] == '') {
 		<body>';
 	echo $success_text;
 	echo '<b>Здравствуйте, '.$name.'!</b>';
-	echo '<br />'.$huy.'<b></b>';
 	echo '<br /><a href="/main/?exit">Выход из аккаунта</a><br />';
 	echo '<p>Текущая температура: '.$temp.'°C</p>';
 	echo '<p>Текущая влажность: '.$wet.'%</p>';
