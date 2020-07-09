@@ -1,0 +1,212 @@
+@font-face 
+    font-family: 'Helvetica thin'
+    src: url('../fonts/HelveticaThin.ttf')
+
+@font-face 
+    font-family: 'Helvetica regular'
+    src: url('../fonts/HelveticaRegular.ttf')
+
+@font-face 
+    font-family: 'Helvetica medium'
+    src: url('../fonts/HelveticaMedium.ttf')
+
+@font-face 
+    font-family: 'Helvetica light'
+    src: url('../fonts/HelveticaLight.ttf')
+
+@font-face 
+    font-family: 'Helvetica black'
+    src: url('../fonts/HelveticaBlack.ttf')
+
+$dark: #444444
+$green: #4B8138
+
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+::selection 
+    color: #fff
+    background: $dark
+
+body 
+    font-size: 10px
+    font-family: 'Helvetica regular'
+    color: $dark
+    .name
+        display: flex
+        align-items: center
+        position: relative
+        margin-left: -10px
+        img 
+            width: 2em
+        span 
+            margin-left: 10px
+            color: $dark
+            font-family: 'Helvetica regular'
+            font-size: 1.5em
+            text-transform: uppercase
+            position: relative
+        small
+            position: absolute
+            top: 0px
+            right: -15px
+            font-size: 10px
+    .links 
+        width: 100%
+        height: 100vh
+        padding-left: 100px
+        display: flex
+        align-items: center
+        flex-direction: column
+        justify-content: flex-start
+        padding-top: 200px
+        h2 
+            margin-top: 50px
+            font-size: 3em
+            color: #000
+        .links-wrap
+            margin-top: 30px
+            a 
+                margin: 0 20px
+                text-decoration: none
+                font-size: 2em 
+                color: $dark
+                &:hover
+                    color: $green
+    .login, .register
+        width: 100%
+        height: 100vh
+        padding-left: 100px
+        display: flex
+        align-items: center
+        flex-direction: column
+        justify-content: flex-start
+        padding-top: 200px
+        .name
+            display: flex
+            align-items: center
+            position: relative
+            margin-left: -10px
+            img 
+                width: 2em
+            span 
+                margin-left: 10px
+                color: $dark
+                font-family: 'Helvetica regular'
+                font-size: 1.5em
+                text-transform: uppercase
+                position: relative
+            small
+                position: absolute
+                top: 0px
+                right: -15px
+                font-size: 10px
+        h2 
+            margin-top: 50px
+            font-size: 3em
+            color: #000
+            margin-bottom: 10px
+        input 
+            font-family: 'Helvetica regular'
+            width: 300px
+            margin-top: 20px 
+            font-size: 1.5em 
+            padding: 10px 20px
+            outline: none
+            border: 1px solid $green
+        input[type="submit"]
+            cursor: pointer
+            background: #fff
+            &:hover
+                background: #f9f9f9
+                border-color: #000
+            &:active
+                color: $green
+        p 
+            font-size: 1.5em 
+            margin-top: 10px
+    .cabinet
+        width: 100%
+        height: 100vh
+        padding-left: 150px
+        display: flex
+        align-items: center
+        flex-direction: column
+        justify-content: flex-start
+        padding-top: 50px
+        padding-right: 50px
+        .header
+            display: flex
+            width: 100%
+            justify-content: space-between
+            b 
+                font-size: 2em
+            a 
+                font-size: 1.5em
+                text-decoration: none
+                color: $dark
+                &:hover
+                    color: $green
+        .actions
+            margin-top: 50px
+            width: 100%
+            display: flex
+            flex-direction: column 
+            h2 
+                color: #000000
+                font-size: 2em
+                margin-bottom: 20px
+            .success
+                margin-bottom: 20px
+                color: #0048BA
+            p 
+                font-size: 2em
+                margin-top: 10px
+                a 
+                    font-size: 1em
+                strong 
+                    color: #0048BA
+                    font-weight: normal
+            a 
+                margin-top: 10px
+                text-decoration: none
+                font-size: 2em 
+                color: $green
+            form 
+                display: flex
+                flex-direction: column
+                input 
+                    width: 150px
+                    margin-top: 10px
+                    padding: 10px 15px
+                    font-size: 1.5em
+                input[type="submit"]
+                    cursor: pointer
+                    background: #fff
+                    border-color: #ccc
+                    outline: none
+                    border: 1px solid $green
+                    &:hover
+                        background: #f9f9f9
+                        border-color: #000
+                    &:active
+                        color: $green
+
+@media (max-width: 500px)
+    body 
+        .links
+            padding-left: 0
+        .login, .register
+            padding-left: 0
+            h2 
+                text-align: center
+            input 
+                max-width: 90%
+        .cabinet
+            padding-left: 50px
+            .header
+                flex-direction: column
+                a 
+                    margin-top: 10px

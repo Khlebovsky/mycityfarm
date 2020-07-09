@@ -15,7 +15,7 @@ if(isset($_POST['register'])) {
 		mysqli_close($link);
 		$_SESSION['login'] = $login;
 		$_SESSION['hash'] = $hash;
-		header('Location: /main');
+		header('Location: /login');
 	}
 	else {
 		$error_text = 'Пароли не совпадают';
@@ -27,19 +27,30 @@ if(isset($_POST['register'])) {
 <head>
 	<meta charset="utf-8">
 	<title>Регистрация</title>
+	<?php 
+		require '../templates/source.php';
+	?>
 </head>
 <body>
-<form method="POST" name="reg_form" action="">
-<input type="text" name="name" required=""><br />
-<input type="text" name="surname" required=""><br />
-<input type="text" name="login" required=""><br />
-<input type="email" name="email" required=""><br />
-<input type="password" name="psswd1" required=""><br />
-<input type="password" name="psswd2" required=""><br />
-<?php
-echo '<p style="color:red">'.$error_text.'</p>';
-?>
-<input type="submit" name="register" value="Создать аккаунт">
-</form>
+	<form method="POST" name="reg_form" action="" class="register">
+		<div class="name">
+            <img src="/img/logo.png">
+            <span>
+                My City Farm
+                <small>GT</small>
+            </span>
+		</div>
+		<h2>Создать аккаунт</h2>
+		<input type="text" name="name" required="" placeholder="Имя">
+		<input type="text" name="surname" required="" placeholder="Фамилия">
+		<input type="text" name="login" required="" placeholder="Логин">
+		<input type="email" name="email" required="" placeholder="Электронная почта">
+		<input type="password" name="psswd1" required="" placeholder="Пароль">
+		<input type="password" name="psswd2" required="" placeholder="Подтверждение пароля">
+			<?php
+				echo '<p style="color:red">'.$error_text.'</p>';
+			?>
+		<input type="submit" name="register" value="Создать аккаунт">
+	</form>
 </body>
 </html>

@@ -24,15 +24,26 @@ if(isset($_POST['log_in'])) {
 <head>
 	<meta charset="utf-8">
 	<title>Вход</title>
+	<?php 
+		require '../templates/source.php';
+	?>
 </head>
 <body>
-<form method="POST" name="login_form" action="">
-<input type="text" name="login" required=""><br />
-<input type="password" name="psswd" required=""><br />
-<?php
-echo '<p style="color:red">'.$error_text.'</p><br />';
-?>
-<input type="submit" name="log_in" value="Войти">
-</form>
+	<form method="POST" name="login_form" action="" class="login">
+		<div class="name">
+            <img src="/img/logo.png">
+            <span>
+                My City Farm
+                <small>GT</small>
+            </span>
+        </div>
+		<h2>Вход в личный кабинет</h2>
+		<input type="text" name="login" required="" placeholder="Логин">
+		<input type="password" name="psswd" required="" placeholder="Пароль">
+		<input type="submit" name="log_in" value="Войти">
+		<?php
+				echo '<p style="color:red">'.$error_text.'</p>';
+		?>
+	</form>
 </body>
 </html>

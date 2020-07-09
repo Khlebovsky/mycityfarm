@@ -46,18 +46,25 @@ if($_GET['action'] == '') {
 		<html>
 		<head>
 			<meta charset="utf-8">
-			<title>Личный кабинет</title>
+			<title>Личный кабинет</title>';
+			require '../templates/source.php';
+	echo '
 		</head>
 		<body>';
-	echo $success_text;
+	echo '<div class="cabinet">';
+	echo '<div class="header">';
 	echo '<b>Здравствуйте, '.$name.'!</b>';
-	echo '<br /><b>'.$huy.'</b>';
-	echo '<br /><a href="/main/?exit">Выход из аккаунта</a><br />';
-	echo '<p>Текущая температура: '.$temp.'°C</p>';
-	echo '<p>Текущая влажность: '.$wet.'%</p>';
-	echo '<p>Текущее состояние света: '.$light.' || <a href="/main/?'.$light_switch_link.'">'.$light_swtich_title.'</a></p>';
-	echo '<a href="/main/?action=set_wet">Задать интервал полива</a><br /><br />
-	<a href="/main/?action=set_light">Задать интервал включения/выключения света</a>
+	echo '<a href="/main/?exit">Выход из аккаунта</a>';
+	echo "</div> <div class='actions'>";
+	echo "<div class='success'>$success_text</div>";
+	echo '<p>Текущая температура: <strong> '.$temp.'°C </strong></p>';
+	echo '<p>Текущая влажность: <strong> '.$wet.'% </strong></p>';
+	echo '<p>Текущее состояние света: <strong> '.$light.' || </strong> <a href="/main/?'.$light_switch_link.'">'.$light_swtich_title.'</a></p>';
+	echo '<a href="/main/?action=set_wet">Задать интервал полива</a>
+	<a href="/main/?action=set_light">Задать интервал включения/выключения света</a>';
+	echo '</div>';
+	echo '
+	</div>
 	</body>
 	</html>';
 }
@@ -91,7 +98,7 @@ elseif($_GET['action'] == 'set_light') {
 			mysqli_set_charset($link, "utf8");
 			mysqli_query($link, "UPDATE `farms` SET `light_val` = '".$light_array_json."' WHERE `farms`.`id` = 1;");
 			mysqli_close($link);
-			$_SESSION['success_text'] = '<p style="color:green">Изменения успешно сохранены!</p>';
+			$_SESSION['success_text'] = '<p>Изменения успешно сохранены!</p>';
 			header('Location: /main');
 	}
 	//в value сделан вывод текущего заданного в БД времени
@@ -99,19 +106,25 @@ elseif($_GET['action'] == 'set_light') {
 	<html>
 	<head>
 		<meta charset="utf-8">
-		<title>Личный кабинет || Интервал света</title>
+		<title>Личный кабинет || Интервал света</title>';
+		require '../templates/source.php';
+	echo '
 	</head>
 	<body>
-	<p>Задайте интервалы для света</p>
+	<div class ="cabinet">
+	<div class ="actions">
+	<h2>Задайте интервалы для света</h2>
 	<form method="POST" name="light_form" action="">
 	<p>Включить свет в:</p>
-	<input type="time" name="time1" value="'.$current_light[0].'" required=""><br />
-	<input type="time" name="time2" value="'.$current_light[1].'" required=""><br />
+	<input type="time" name="time1" value="'.$current_light[0].'" required="">
+	<input type="time" name="time2" value="'.$current_light[1].'" required="">
 	<p>Выключить свет в:</p>
-	<input type="time" name="time3" value="'.$current_light[2].'" required=""><br />
-	<input type="time" name="time4" value="'.$current_light[3].'" required=""><br />
+	<input type="time" name="time3" value="'.$current_light[2].'" required="">
+	<input type="time" name="time4" value="'.$current_light[3].'" required="">
 	<input type="submit" name="done" value="Готово!">
 	</form>
+	</div>
+	</div>
 	</body>
 	</html>';
 }
@@ -145,7 +158,7 @@ elseif($_GET['action'] == 'set_wet') {
 			mysqli_set_charset($link, "utf8");
 			mysqli_query($link, "UPDATE `farms` SET `watering_val` = '".$watering_array_json."' WHERE `farms`.`id` = 1;");
 			mysqli_close($link);
-			$_SESSION['success_text'] = '<p style="color:green">Изменения успешно сохранены!</p>';
+			$_SESSION['success_text'] = '<p>Изменения успешно сохранены!</p>';
 			header('Location: /main');
 	}
 	//в value сделан вывод текущего заданного в БД времени
@@ -153,18 +166,24 @@ elseif($_GET['action'] == 'set_wet') {
 	<html>
 	<head>
 		<meta charset="utf-8">
-		<title>Личный кабинет || Интервал полива</title>
+		<title>Личный кабинет || Интервал полива</title>';
+		require '../templates/source.php';
+	echo '
 	</head>
 	<body>
-	<p>Задайте время полива</p><br />
+	<div class ="cabinet">
+	<div class ="actions">
+	<h2>Задайте время полива</h2>
 	<form method="POST" name="watering_form" action="">
-	<input type="time" name="time1" value="'.$current_watering[0].'" required=""><br />
-	<input type="time" name="time2" value="'.$current_watering[1].'" required=""><br />
-	<input type="time" name="time3" value="'.$current_watering[2].'" required=""><br />
-	<input type="time" name="time4" value="'.$current_watering[3].'" required=""><br />
-	<input type="time" name="time5" value="'.$current_watering[4].'" required=""><br />
+	<input type="time" name="time1" value="'.$current_watering[0].'" required="">
+	<input type="time" name="time2" value="'.$current_watering[1].'" required="">
+	<input type="time" name="time3" value="'.$current_watering[2].'" required="">
+	<input type="time" name="time4" value="'.$current_watering[3].'" required="">
+	<input type="time" name="time5" value="'.$current_watering[4].'" required="">
 	<input type="submit" name="done" value="Готово!">
 	</form>
+	</div>
+	</div>
 	</body>
 	</html>';
 }
