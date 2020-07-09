@@ -7,4 +7,5 @@ urlpatterns = [
     path('details/', views.DetailsPageView.as_view(), name = 'details'),
     path('cabinet/', views.CabinetView, name = 'cabinet'),
     path('cabinet/register', views.CabineRegistrtView, name = 'register'),
+    path('wiki', views.WikiView, name = 'wiki'),
 ]

@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     #local
     'main',
     'users',
-    'wiki',
     'shop'
 ]
 

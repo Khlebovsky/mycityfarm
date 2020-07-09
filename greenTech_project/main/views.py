@@ -16,3 +16,7 @@ def CabinetView(request):
 
 def CabineRegistrtView(request):
     return redirect("https://cabinet.mycityfarm.ru/register")
+
+
+def WikiView(request):
+    return redirect("https://wiki.mycityfarm.ru/")
