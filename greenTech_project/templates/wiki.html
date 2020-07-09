@@ -16,12 +16,12 @@
         <small>
             Выберете подходящий раздел и ознакомьтесь с обучающей статьёй
         </small>
-        {% for article in object_list %}
-        <div class="article"> 
-            <h1>
-                <a href ="{% url 'article_detail' article.pk %}">{{ article.number }}. {{ article.title }}</a>
-            </h1>
-        </div>
+        {% for section in object_list %}
+            <div class="section">
+                <h1>
+                    {{ section.number }}. {{ section.name }}
+                </h1>
+            </div>
         {% endfor %}
     </div>
 </div>

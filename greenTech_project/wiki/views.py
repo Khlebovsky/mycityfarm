@@ -1,9 +1,14 @@
-from django.views.generic import ListView, DetailView
-from .models import Article
+from django.views.generic import ListView, DetailView, TemplateView
+from .models import Article, Category, Section
+
+
+class WikiCategoryView(ListView):
+    model = Category
+    template_name = "wiki_category.html"
 
 
 class WikiView(ListView):
-    model = Article
+    model = Section
     template_name = "wiki.html"
 
 

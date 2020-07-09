@@ -5,6 +5,16 @@ if(isset($_GET['exit'])) {
 	session_destroy();
 	header('Location: /');
 }
+if(isset($_GET['light_on'])) {
+	$link = mysqli_connect($db_host, $db_user, $db_psswd, $db_name);
+	mysqli_set_charset($link, "utf8");
+	mysqli_query($link, 'UPDATE `farms` SET `light` = 1 WHERE `farms`.`id` = 1;');
+}
+if(isset($_GET['light_off'])) {
+	$link = mysqli_connect($db_host, $db_user, $db_psswd, $db_name);
+	mysqli_set_charset($link, "utf8");
+	mysqli_query($link, 'UPDATE `farms` SET `light` = 0 WHERE `farms`.`id` = 1;');
+}
 if($_GET['action'] == '') {
 	//Главное меню
 	$link = mysqli_connect($db_host, $db_user, $db_psswd, $db_name);
@@ -19,9 +29,13 @@ if($_GET['action'] == '') {
 	$light_val = $farm_data['light'];
 	if($light_val == 1) {
 		$light = 'включен';
+		$light_switch_link = 'light_off';
+		$light_swtich_title = 'Выключить';
 	}
 	else {
 		$light = 'выключен';
+		$light_switch_link = 'light_on';
+		$light_swtich_title = 'Включить';
 	}
 	mysqli_close($link);
 	if($_SESSION['success_text'] != '') {
@@ -37,10 +51,11 @@ if($_GET['action'] == '') {
 		<body>';
 	echo $success_text;
 	echo '<b>Здравствуйте, '.$name.'!</b>';
+	echo '<br /><b>'.$huy.'</b>';
 	echo '<br /><a href="/main/?exit">Выход из аккаунта</a><br />';
 	echo '<p>Текущая температура: '.$temp.'°C</p>';
 	echo '<p>Текущая влажность: '.$wet.'%</p>';
-	echo '<p>Текущее состояние света: '.$light.'</p>';
+	echo '<p>Текущее состояние света: '.$light.' || <a href="/main/?'.$light_switch_link.'">'.$light_swtich_title.'</a></p>';
 	echo '<a href="/main/?action=set_wet">Задать интервал полива</a><br /><br />
 	<a href="/main/?action=set_light">Задать интервал включения/выключения света</a>
 	</body>
