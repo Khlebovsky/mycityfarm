@@ -1,5 +1,6 @@
 # mycityfarm
 //ru
+
 Проект разрабатывается в рамках конкурса MAKSERCASE
 
 Структура папок:
@@ -12,6 +13,7 @@
 
 
 //en
+
 The project is being developed as part of the MAKSERCASE contest
 
 Folder structure:
