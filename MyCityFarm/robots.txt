@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /fonts
+Disallow: /lib
+Disallow: /style
+Disallow: /script
+Disallow: /img
+Sitemap: https://mycityfarm.ru/sitemap.xml

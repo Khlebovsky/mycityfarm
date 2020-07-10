@@ -32,6 +32,9 @@ if(isset($_POST['register'])) {
 	?>
 </head>
 <body>
+	<?php 
+		require '../templates/menu.php';
+	?>
 	<form method="POST" name="reg_form" action="" class="register">
 		<div class="name">
             <img src="/img/logo.png">

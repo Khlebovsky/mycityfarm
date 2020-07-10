@@ -46,7 +46,72 @@ body {
   color: #444444;
 }
 
-body .name {
+body .menu {
+  top: 0;
+  position: fixed;
+  margin-left: 100px;
+  z-index: 200;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .menu .close-menu {
+  position: absolute;
+  top: 20px;
+  right: 220px;
+  color: #000;
+  font-size: 30px;
+}
+
+body .menu .close-menu:hover {
+  color: #4B8138;
+}
+
+body .menu .links {
+  margin-left: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .menu .links a {
+  font-family: 'Helvetica medium';
+  text-decoration: none;
+  font-size: 2.5em;
+  color: #000;
+  margin: 10px 0;
+}
+
+body .menu .links a:hover {
+  color: #4B8138;
+}
+
+body .menu .img {
+  width: 400px;
+  height: 100%;
+  background: url("../img/menu.jpg") left no-repeat;
+  background-size: cover;
+}
+
+body .menu .menu-bottom {
+  position: absolute;
+  bottom: 50px;
+  left: 150px;
+}
+
+body .menu .menu-bottom .name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,14 +119,19 @@ body .name {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  margin-left: -10px;
 }
 
-body .name img {
+body .menu .menu-bottom .name .green-1 {
+  width: 50px;
+  position: absolute;
+  right: -100px;
+}
+
+body .menu .menu-bottom .name img {
   width: 2em;
 }
 
-body .name span {
+body .menu .menu-bottom .name span {
   margin-left: 10px;
   color: #444444;
   font-family: 'Helvetica regular';
@@ -70,14 +140,86 @@ body .name span {
   position: relative;
 }
 
-body .name small {
+body .menu .menu-bottom .name span small {
   position: absolute;
   top: 0px;
   right: -15px;
   font-size: 10px;
 }
 
-body .links {
+body .left-menu {
+  z-index: 100;
+  width: 100px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .left-menu a {
+  min-width: 150px;
+  color: #444444;
+  font-size: 1.2em;
+  font-family: 'Helvetica regular';
+  text-decoration: none;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+body .left-menu a:hover {
+  color: #4B8138;
+}
+
+body .left-menu a .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+body .left-menu a .name img {
+  width: 2em;
+}
+
+body .left-menu a .name span {
+  margin-left: 10px;
+  color: #444444;
+  font-family: 'Helvetica regular';
+  text-transform: uppercase;
+  position: relative;
+}
+
+body .left-menu a .name span small {
+  position: absolute;
+  top: 0px;
+  right: -15px;
+  font-size: 8px;
+}
+
+body .left-menu a:nth-child(2) {
+  font-size: 3em;
+  min-width: 10px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+body .links-cabinet {
   width: 100%;
   height: 100vh;
   padding-left: 100px;
@@ -97,24 +239,55 @@ body .links {
   padding-top: 200px;
 }
 
-body .links h2 {
+body .links-cabinet .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-left: -10px;
+}
+
+body .links-cabinet .name img {
+  width: 2em;
+}
+
+body .links-cabinet .name span {
+  margin-left: 10px;
+  color: #444444;
+  font-family: 'Helvetica regular';
+  font-size: 1.5em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+body .links-cabinet .name small {
+  position: absolute;
+  top: 0px;
+  right: -15px;
+  font-size: 10px;
+}
+
+body .links-cabinet h2 {
   margin-top: 50px;
   font-size: 3em;
   color: #000;
 }
 
-body .links .links-wrap {
+body .links-cabinet .links-wrap {
   margin-top: 30px;
 }
 
-body .links .links-wrap a {
+body .links-cabinet .links-wrap a {
   margin: 0 20px;
   text-decoration: none;
   font-size: 2em;
   color: #444444;
 }
 
-body .links .links-wrap a:hover {
+body .links-cabinet .links-wrap a:hover {
   color: #4B8138;
 }
 

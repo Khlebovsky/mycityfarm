@@ -31,6 +31,12 @@ $(function () {
             opacity: 1
         }, 300)
     });
+    $('.menu .links a').click(function () {
+        $('.menu').fadeOut(300);
+        $('.open-menu').animate({
+            opacity: 1
+        }, 300)
+    });
 });
 
 function getRandomInt(min, max) {

@@ -13,9 +13,9 @@
 </head>
 <body>
     <?php 
-        #require "templates/menu.php";
+        require "templates/menu.php";
     ?>
-    <div class="links">
+    <div class="links-cabinet">
         <div class="name">
             <img src="/img/logo.png">
             <span>

@@ -51,6 +51,7 @@ if($_GET['action'] == '') {
 	echo '
 		</head>
 		<body>';
+	require '../templates/menu.php';
 	echo '<div class="cabinet">';
 	echo '<div class="header">';
 	echo '<b>Здравствуйте, '.$name.'!</b>';
@@ -110,7 +111,9 @@ elseif($_GET['action'] == 'set_light') {
 		require '../templates/source.php';
 	echo '
 	</head>
-	<body>
+	<body>';
+	require '../templates/menu.php';
+	echo '
 	<div class ="cabinet">
 	<div class ="actions">
 	<h2>Задайте интервалы для света</h2>
@@ -170,7 +173,9 @@ elseif($_GET['action'] == 'set_wet') {
 		require '../templates/source.php';
 	echo '
 	</head>
-	<body>
+	<body>';
+	require '../templates/menu.php';
+	echo '
 	<div class ="cabinet">
 	<div class ="actions">
 	<h2>Задайте время полива</h2>

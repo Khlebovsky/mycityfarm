@@ -29,6 +29,9 @@ if(isset($_POST['log_in'])) {
 	?>
 </head>
 <body>
+	<?php 
+		require '../templates/menu.php';
+	?>
 	<form method="POST" name="login_form" action="" class="login">
 		<div class="name">
             <img src="/img/logo.png">

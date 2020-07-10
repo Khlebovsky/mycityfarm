@@ -3,12 +3,12 @@
             <a href="#none" class="close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
         </div>
         <div class="links">
-            <a href="/">Главная</a>
-            <a href="/details">Подробнее</a>
+            <a href="https://mycityfarm.ru">Главная</a>
+            <a href="https://mycityfarm.ru/details">Подробнее</a>
             <a href="https://wiki.mycityfarm.ru">Энциклопедия</a>
             <a href="https://shop.mycityfarm.ru">Онлайн-магазин</a>
-            <a href="/details#contacts">Контакты</a>
-            <a href="https://cabinet.mycityfarm.ru">Личный кабинет</a>
+            <a href="https://mycityfarm.ru/details#contacts">Контакты</a>
+            <a href="/">Личный кабинет</a>
         </div>
         <div class="img"></div>
         <div class="menu-bottom">
@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="left-menu">
-        <a href="/">
+        <a href="https://mycityfarm.ru">
             <div class="name">
                 <img src="/img/logo.png">
                 <span>
@@ -33,5 +33,5 @@
             </div>
         </a>
         <a href="#none" class="open-menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
-        <a href="/details#contacts">Контакты</a>
+        <a href="https://mycityfarm.ru/details#contacts">Контакты</a>
     </div>
