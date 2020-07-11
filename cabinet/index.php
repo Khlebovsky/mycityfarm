@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Личный кабинет</title>
+    <title>Личный кабинет || MyCityFarm</title>
     <?php 
         require 'templates/source.php';
     ?>

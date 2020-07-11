@@ -221,7 +221,7 @@ body .left-menu a:nth-child(2) {
 
 body .links-cabinet {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding-left: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -293,7 +293,7 @@ body .links-cabinet .links-wrap a:hover {
 
 body .login, body .register {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding-left: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -380,7 +380,7 @@ body .login p, body .register p {
 
 body .cabinet {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding-left: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -502,7 +502,56 @@ body .cabinet .actions form input[type="submit"]:active {
 }
 
 @media (max-width: 500px) {
-  body .links {
+  body .left-menu {
+    width: 100%;
+    height: 100px;
+    top: 0;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 40px;
+    padding-right: 50px;
+  }
+  body .left-menu a {
+    display: none;
+  }
+  body .left-menu a:nth-child(2) {
+    display: inline-block;
+    font-size: 5em;
+  }
+  body .menu {
+    margin-left: 0;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 50px;
+  }
+  body .menu .close-menu {
+    right: 25px;
+    top: 20px;
+    font-size: 50px;
+  }
+  body .menu .links {
+    text-align: right;
+    margin-left: 50px;
+  }
+  body .menu .links a {
+    font-size: 3em;
+  }
+  body .menu .img {
+    display: none;
+  }
+  body .menu .menu-bottom {
+    right: 60px;
+    left: auto;
+  }
+  body .menu .menu-bottom .green-1 {
+    display: none;
+  }
+  body .links-cabinet {
     padding-left: 0;
   }
   body .login, body .register {
@@ -515,6 +564,7 @@ body .cabinet .actions form input[type="submit"]:active {
     max-width: 90%;
   }
   body .cabinet {
+    padding-top: 150px;
     padding-left: 50px;
   }
   body .cabinet .header {
@@ -525,6 +575,16 @@ body .cabinet .actions form input[type="submit"]:active {
   }
   body .cabinet .header a {
     margin-top: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  body .menu .links a {
+    font-size: 2.5em;
+  }
+  body .cabinet {
+    padding-left: 20px;
+    padding-right: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */

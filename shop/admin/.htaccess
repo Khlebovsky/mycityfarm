@@ -1,0 +1,4 @@
+AuthType Basic 
+AuthName "Please, enter a password" 
+AuthUserFile /home/k/khlebovsky/shop.mycityfarm/public_html/passwd/.htpasswd
+require valid-user

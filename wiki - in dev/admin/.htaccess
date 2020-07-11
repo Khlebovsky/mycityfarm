@@ -1,4 +1,0 @@
-#AuthType Basic 
-#AuthName "Please, enter a password" 
-#AuthUserFile /home/k/khlebovsky/wiki.mycityfarm/public_html/passwd/.htpasswd
-#require valid-user

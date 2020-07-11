@@ -140,7 +140,7 @@ body
                 transform: rotate(0deg)
     .links-cabinet 
         width: 100%
-        height: 100vh
+        min-height: 100vh
         padding-left: 100px
         display: flex
         align-items: center
@@ -181,7 +181,7 @@ body
                     color: $green
     .login, .register
         width: 100%
-        height: 100vh
+        min-height: 100vh
         padding-left: 100px
         display: flex
         align-items: center
@@ -233,7 +233,7 @@ body
             margin-top: 10px
     .cabinet
         width: 100%
-        height: 100vh
+        min-height: 100vh
         padding-left: 150px
         display: flex
         align-items: center
@@ -300,7 +300,40 @@ body
 
 @media (max-width: 500px)
     body 
-        .links
+        .left-menu
+            width: 100%
+            height: 100px
+            top: 0
+            align-items: flex-end
+            justify-content: flex-start
+            padding-top: 40px
+            padding-right: 50px
+            a 
+                display: none
+                &:nth-child(2)
+                    display: inline-block
+                    font-size: 5em
+        .menu 
+            margin-left: 0
+            justify-content: flex-end
+            padding-right: 50px
+            .close-menu
+                right: 25px
+                top: 20px
+                font-size: 50px
+            .links
+                text-align: right
+                margin-left: 50px
+                a 
+                    font-size: 3em
+            .img 
+                display: none
+            .menu-bottom
+                right: 60px
+                left: auto
+                .green-1
+                    display: none
+        .links-cabinet
             padding-left: 0
         .login, .register
             padding-left: 0
@@ -309,8 +342,19 @@ body
             input 
                 max-width: 90%
         .cabinet
+            padding-top: 150px
             padding-left: 50px
             .header
                 flex-direction: column
                 a 
                     margin-top: 10px
+
+@media (max-width: 350px)
+    body 
+        .menu 
+            .links 
+                a 
+                    font-size: 2.5em
+        .cabinet
+            padding-left: 20px
+            padding-right: 10px

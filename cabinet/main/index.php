@@ -46,7 +46,7 @@ if($_GET['action'] == '') {
 		<html>
 		<head>
 			<meta charset="utf-8">
-			<title>Личный кабинет</title>';
+			<title>Личный кабинет || MyCityFarm</title>';
 			require '../templates/source.php';
 	echo '
 		</head>

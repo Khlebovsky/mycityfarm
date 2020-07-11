@@ -1,16 +1,484 @@
+@font-face 
+    font-family: 'Helvetica thin'
+    src: url('../fonts/HelveticaThin.ttf')
+
+@font-face 
+    font-family: 'Helvetica regular'
+    src: url('../fonts/HelveticaRegular.ttf')
+
+@font-face 
+    font-family: 'Helvetica medium'
+    src: url('../fonts/HelveticaMedium.ttf')
+
+@font-face 
+    font-family: 'Helvetica light'
+    src: url('../fonts/HelveticaLight.ttf')
+
+@font-face 
+    font-family: 'Helvetica black'
+    src: url('../fonts/HelveticaBlack.ttf')
+
+$dark: #444444
+$green: #4B8138
+
 * 
     margin: 0
     padding: 0
+    box-sizing: border-box
+
+::selection 
+    color: #fff
+    background: $dark
+
 body 
-    a 
-        .in-dev
-            width: 100%
-            height: 100vh
-            background: url('../in-dev.png') center no-repeat
+    font-size: 10px
+    font-family: 'Helvetica regular'
+    color: $dark
+    .top-fixed
+        display: none
+    .menu
+        top: 0
+        position: fixed
+        margin-left: 100px
+        z-index: 200
+        width: 100%
+        height: 100vh
+        background: #fff
+        display: none
+        align-items: center
+        justify-content: space-between
+        .close-menu
+            position: absolute
+            top: 20px
+            right: 220px
+            color: #000 
+            font-size: 30px
+            &:hover
+                color: $green
+        .links
+            margin-left: 150px
+            display: flex
+            flex-direction: column
+            a 
+                font-family: 'Helvetica medium'
+                text-decoration: none
+                font-size: 2.5em
+                color: #000
+                margin: 10px 0
+                &:hover
+                    color: $green
+        .img 
+            width: 400px
+            height: 100%
+            background: url('../img/menu.jpg') left no-repeat
             background-size: cover
+        .menu-bottom
+            position: absolute
+            bottom: 50px
+            left: 150px
+            .name
+                display: flex
+                align-items: center
+                position: relative
+                .green-1
+                    width: 50px
+                    position: absolute
+                    right: -100px
+                img 
+                    width: 2em
+                span 
+                    margin-left: 10px
+                    color: $dark
+                    font-family: 'Helvetica regular'
+                    font-size: 1.5em
+                    text-transform: uppercase
+                    position: relative
+                    small
+                        position: absolute
+                        top: 0px
+                        right: -15px
+                        font-size: 10px
+    .left-menu
+        z-index: 100
+        width: 100px
+        height: 100vh
+        position: fixed
+        top: 0
+        left: 0
+        background: #fff
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+        a 
+            min-width: 150px
+            color: $dark
+            font-size: 1.2em
+            font-family: 'Helvetica regular'
+            text-decoration: none
+            transform: rotate(270deg)
+            &:hover
+                color: $green
+            .name
+                display: flex
+                align-items: center
+                position: relative
+                img 
+                    width: 2em
+                span 
+                    margin-left: 10px
+                    color: $dark
+                    font-family: 'Helvetica regular'
+                    text-transform: uppercase
+                    position: relative
+                    small
+                        position: absolute
+                        top: 0px
+                        right: -15px
+                        font-size: 8px
+            &:nth-child(2)
+                font-size: 3em
+                min-width: 10px
+                transform: rotate(0deg)
+    .wrapper
+        width: 100%
+        min-height: 100vh 
+        padding-left: 100px
+        padding-top: 200px
+        display: flex
+        flex-direction: column 
+        align-items: center
+        position: relative
+        h2 
+            font-size: 4em 
+        small 
+            font-size: 2em
+        .add-article-text
+            position: absolute
+            display: inline-block
+            text-decoration: none
+            font-size: 1.5em 
+            color: $dark
+            right: 50px
+            bottom: 50px
+            &:hover
+                color: $green
+        .categories
+            margin-top: 30px
+            width: 1000px
+            display: flex
+            justify-content: space-between
+            a 
+                padding: 10px
+                min-width: 300px
+                height: 250px
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                text-decoration: none
+                color: $dark
+                margin: 0 10px
+                transition: .2s
+                i 
+                    font-size: 5em
+                h2 
+                    margin-top: 10px
+                    font-size: 20px
+                    text-align: center
+                span
+                    margin-top: 5px
+                    text-align: center
+                    font-size: 1.5em
+                &:nth-child(1)
+                    i 
+                        color: #3D3DB9
+                    &:hover
+                        box-shadow: -8px 8px 16px 0px rgba(#3D3DB9, 0.2)
+                &:nth-child(2)
+                    i 
+                        color: $green
+                    &:hover
+                        box-shadow: -8px 8px 16px 0px rgba($green, 0.2)
+                &:nth-child(3)
+                    min-width: 400px
+                    i 
+                        color: #D19B39
+                    &:hover
+                        box-shadow: -8px 8px 16px 0px rgba(#D19B39, 0.2)
+    .articles-wrap
+        width: 100%
+        min-height: 100vh
+        padding-left: 100px
+        display: flex
+        .img
+            width: 400px
+            height: 100vh
+            background: url('../img/en.jpg') right no-repeat
+            background-size: cover
+        .content
+            display: flex
+            flex-direction: column
+            padding-top: 100px
+            padding-left: 50px
+            h1 
+                font-size: 4em 
+                position: relative
+                .green-1
+                    position: absolute
+                    top: -10px
+                    left: 320px
+            small 
+                font-size: 1.8em
+                margin-top: 10px
+                color: #8E8E8E
+                margin-bottom: 50px
+            .category
+                cursor: pointer
+                margin-top: 10px
+                display: flex
+                flex-direction: column
+                h2 
+                    font-size: 3em 
+                    color: #000
+                    display: flex
+                    align-items: center
+                    i 
+                        margin-left: 10px
+                        font-size: 20px
+                .sub-category-wrap
+                    display: none
+                    .sub-category
+                        display: flex
+                        flex-direction: column
+                        margin-left: 20px
+                        h3 
+                            font-size: 2.5em
+                            margin-top: 20px
+                            margin-bottom: 5px
+                        .article-wrap
+                            display: none
+                            flex-direction: column
+                            a 
+                                display: block
+                                font-size: 2em 
+                                text-decoration: none
+                                color: $green
+                                margin-left: 10px
+                                &:hover
+                                    color: $dark
+    .article
+        width: 100%
+        padding-left: 150px
+        padding-top: 50px
+        display: flex
+        flex-direction: column
+        padding-right: 20px
+        a 
+            text-decoration: none
+            color: $dark
+            font-size: 1.5em
+            margin-top: 10px
+            &:hover
+                color: $green
+        h1 
+            font-size: 3em 
+        span 
+            font-size: 1.5em 
+            margin-top: 20px
+            max-width: 800px
+            img 
+                max-width: 100%
+            a 
+                font-size: 1em 
+                font-weight: bold
+                color: $green
+                &:hover
+                    color: #000
+    .add-article
+        padding-left: 100px 
+        padding-top: 200px
+        width: 100%
+        min-height: 100vh 
+        .add-article-wrap
+            display: flex
+            flex-direction: column 
+            width: 100%
+            align-items: center
+            h1 
+                font-size: 4em
+            form 
+                margin-top: 50px
+                display: flex
+                flex-direction: column 
+                input, textarea 
+                    width: 500px 
+                    max-width: 100%
+                    padding: 10px 20px
+                    font-size: 1.5em
+                    margin: 10px 0
+                    border: 1px solid $green
+                    font-family: 'Helvetica regular'
+                input[type="text"]
+                    &::focus
+                        border: 1px solid #000
+                        border-radius: 0
+                textarea 
+                    height: 300px
+                button 
+                    padding: 10px 20px 
+                    font-size: 1.5em
+                    cursor: pointer
+                    border: 1px solid $green 
+                    background: #fff
+                    &:hover
+                        border-color: #000000
+                    &:active
+                        color: $green
+    .thanks
+        padding-left: 100px
+        padding-top: 200px 
+        width: 100%
+        min-height: 100vh
+        .content
+            width: 100%
+            display: flex
+            flex-direction: column 
+            align-items: center
+            h1 
+                font-size: 4em 
+            span 
+                margin-top: 10px 
+                max-width: 100%
+                width: 1000px
+                text-align: center
+                font-size: 2em
+            a 
+                text-decoration: none
+                font-size: 2em 
+                margin-top: 30px 
+                color: $green
+                &:hover
+                    color: $dark
 
 @media (max-width: 500px)
     body 
-        a 
-            .in-dev
-                background: url('../in-dev-m.png') center no-repeat
+        .top-fixed
+            top: 20px
+            left: 20px
+            z-index: 101
+            position: fixed
+            display: flex
+            flex-direction: column
+            strong 
+                font-size: 6em 
+                color: #000 
+                small 
+                    color: $green 
+                    font-size: 1em
+            small 
+                font-size: 2em
+        .left-menu
+            width: 100%
+            height: 120px
+            top: 0
+            align-items: flex-end
+            justify-content: flex-start
+            padding-top: 40px
+            padding-right: 50px
+            a 
+                display: none
+                &:nth-child(2)
+                    display: inline-block
+                    font-size: 5em
+        .menu 
+            margin-left: 0
+            justify-content: flex-end
+            padding-right: 50px
+            .close-menu
+                right: 25px
+                top: 20px
+                font-size: 50px
+            .links
+                text-align: right
+                margin-left: 50px
+                a 
+                    font-size: 3em
+            .img 
+                display: none
+            .menu-bottom
+                right: 60px
+                left: auto
+                .green-1
+                    display: none
+        .wrapper
+            max-width: 100%
+            padding: 0
+            padding-top: 150px
+            h2 
+                text-align: center
+                font-size: 3em
+            small 
+                margin-top: 10px
+            .add-article-text
+                bottom: 20px
+            .categories
+                max-width: 90%
+                flex-direction: column
+                a 
+                    min-height: 300px
+                    min-width: 200px
+                    max-width: 95%
+                    &:nth-child(3)
+                        min-width: 200px
+                    h2 
+                        text-align: center
+        .articles-wrap
+            background: #F5F5F5
+            padding-left: 0
+            padding-top: 150px
+            .img 
+                display: none
+            .content
+                max-width: 90%
+                padding-left: 20px
+                h1 
+                    display: none
+                small 
+                    display: none
+                .category 
+                    h2 
+                        font-size: 2.5em
+                    .sub-category-wrap
+                        .sub-category
+                            h3 
+                                font-size: 2em
+        .article
+            padding-top: 150px
+            padding-left: 20px
+        .add-article
+            padding-left: 0
+            .add-article-wrap
+                max-width: 100%
+                h1 
+                    text-align: center
+                form 
+                    width: 100%
+                    align-items: center
+                    input, textarea, button
+                        width: 90%
+        .thanks
+            padding-left: 0
+            .content
+                width: 90%
+                margin: 0 auto
+
+@media (max-width: 350px)
+    body 
+        .menu 
+            .links 
+                a 
+                    font-size: 2.5em
+        .articles-wrap
+            .content
+                padding-left: 20px

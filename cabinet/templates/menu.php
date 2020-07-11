@@ -5,7 +5,7 @@
         <div class="links">
             <a href="https://mycityfarm.ru">Главная</a>
             <a href="https://mycityfarm.ru/details">Подробнее</a>
-            <a href="https://wiki.mycityfarm.ru">Энциклопедия</a>
+            <a href="https://wiki.mycityfarm.ru">Помощник</a>
             <a href="https://shop.mycityfarm.ru">Онлайн-магазин</a>
             <a href="https://mycityfarm.ru/details#contacts">Контакты</a>
             <a href="/">Личный кабинет</a>

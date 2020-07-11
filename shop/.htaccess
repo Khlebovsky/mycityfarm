@@ -1,0 +1,13 @@
+php_value display_errors Off
+php_value date.timezone Europe/Moscow
+
+
+# Редиректы на страницы с ошибками
+
+
+# ErrorDocument 400
+# ErrorDocument 401
+# ErrorDocument 403
+# ErrorDocument 404
+# ErrorDocument 500
+# ErrorDocument 503
