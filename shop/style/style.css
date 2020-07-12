@@ -253,6 +253,7 @@ body .shop .product-wrapper {
 }
 
 body .shop .product {
+  padding: 10px;
   margin: 20px 0;
   width: 300px;
   height: 400px;
@@ -297,12 +298,14 @@ body .shop .product .text-wrap {
 }
 
 body .shop .product h2 {
+  text-align: center;
   font-size: 2em;
 }
 
 body .shop .product span {
   font-size: 1.5em;
   margin-top: 5px;
+  text-align: center;
 }
 
 body .shop .product p {
@@ -412,6 +415,12 @@ body .shop .product p {
             flex-direction: row-reverse;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+  body .shop .product-wrapper .product h2 {
+    text-align: left;
+  }
+  body .shop .product-wrapper .product span {
+    text-align: left;
   }
   body .shop .product-wrapper .product .text-wrap {
     -webkit-box-align: start;
