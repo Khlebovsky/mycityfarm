@@ -1,16 +1,702 @@
+@font-face 
+    font-family: 'Helvetica thin'
+    src: url('../fonts/HelveticaThin.ttf')
+
+@font-face 
+    font-family: 'Helvetica regular'
+    src: url('../fonts/HelveticaRegular.ttf')
+
+@font-face 
+    font-family: 'Helvetica medium'
+    src: url('../fonts/HelveticaMedium.ttf')
+
+@font-face 
+    font-family: 'Helvetica light'
+    src: url('../fonts/HelveticaLight.ttf')
+
+@font-face 
+    font-family: 'Helvetica black'
+    src: url('../fonts/HelveticaBlack.ttf')
+
+$dark: #444444
+$green: #39A618
+
 * 
     margin: 0
     padding: 0
-body 
-    a 
-        .in-dev
-            width: 100%
-            height: 100vh
-            background: url('../in-dev.png') center no-repeat
-            background-size: cover
+    box-sizing: border-box
 
+::selection 
+    color: #fff
+    background: $dark
+
+body 
+    font-size: 10px
+    font-family: 'Helvetica regular'
+    color: $dark
+    .menu
+        top: 0
+        position: fixed
+        margin-left: 100px
+        z-index: 200
+        width: 100%
+        height: 100vh
+        background: #fff
+        display: none
+        align-items: center
+        justify-content: space-between
+        .close-menu
+            position: absolute
+            top: 20px
+            right: 220px
+            color: #000 
+            font-size: 30px
+            &:hover
+                color: $green
+        .links
+            margin-left: 150px
+            display: flex
+            flex-direction: column
+            a 
+                font-family: 'Helvetica medium'
+                text-decoration: none
+                font-size: 2.5em
+                color: #000
+                margin: 10px 0
+                &:hover
+                    color: $green
+        .img 
+            width: 400px
+            height: 100%
+            background: url('../img/menu.jpg') left no-repeat
+            background-size: cover
+        .menu-bottom
+            position: absolute
+            bottom: 50px
+            left: 150px
+            .name
+                display: flex
+                align-items: center
+                position: relative
+                .green-1
+                    width: 50px
+                    position: absolute
+                    right: -100px
+                img 
+                    width: 2em
+                span 
+                    margin-left: 10px
+                    color: $dark
+                    font-family: 'Helvetica regular'
+                    font-size: 1.5em
+                    text-transform: uppercase
+                    position: relative
+                    small
+                        position: absolute
+                        top: 0px
+                        right: -15px
+                        font-size: 10px
+    .left-menu
+        z-index: 100
+        width: 100px
+        height: 100vh
+        position: fixed
+        top: 0
+        left: 0
+        background: transparent
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+        a 
+            min-width: 150px
+            color: $dark
+            font-size: 1.2em
+            font-family: 'Helvetica regular'
+            text-decoration: none
+            transform: rotate(270deg)
+            &:hover
+                color: $green
+            .name
+                display: flex
+                align-items: center
+                position: relative
+                img 
+                    width: 2em
+                span 
+                    margin-left: 10px
+                    color: $dark
+                    font-family: 'Helvetica regular'
+                    text-transform: uppercase
+                    position: relative
+                    small
+                        position: absolute
+                        top: 0px
+                        right: -15px
+                        font-size: 8px
+            &:nth-child(2)
+                font-size: 3em
+                min-width: 10px
+                transform: rotate(0deg)
+    .main 
+        width: 100%
+        min-height: 100vh 
+        background: url('../img/menu.jpg') center no-repeat
+        background-size: cover
+        display: flex
+        .content-wrapper
+            width: 100%
+            min-height: 100%
+            background: rgba(#fff, .9)
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            position: relative
+            .green-1
+                position: absolute 
+                right: 0
+                bottom: 30%
+            .green-4
+                position: absolute
+                left: 0
+                top: 20%
+            .name
+                display: flex
+                flex-direction: column
+                align-items: center
+                position: relative
+                .green-1
+                    width: 100px
+                    position: absolute
+                    top: -80px
+                    left: -80px
+                img 
+                    width: 3em
+                span 
+                    margin-top: 5px
+                    margin-left: 0
+                    color: $dark
+                    font-family: 'Helvetica regular'
+                    font-size: 2em
+                    text-transform: uppercase
+                    position: relative
+                    small
+                        display: none
+                        position: absolute
+                        top: 0px
+                        right: -15px
+                        font-size: 10px
+            h1 
+                margin-top: 50px
+                font-size: 2.5em 
+                max-width: 300px
+                text-align: center
+                text-transform: uppercase
+                font-family: 'Helvetica medium'    
+                small 
+                    font-weight: bold 
+                    color: $green
+                    font-size: 1em
+            span 
+                margin-top: 50px 
+                font-size: 3em
+    .block-1
+        width: 100%
+        min-height: 100vh 
+        display: flex
+        .content-wrapper
+            width: 100%
+            min-height: 100%
+            display: flex
+            flex-direction: column 
+            align-items: flex-end
+            padding-top: 250px
+            padding: 250px 40px 0 40px 
+            position: relative
+            .green-1
+                position: absolute 
+                right: 0
+                bottom: 25%
+            .green-4
+                position: absolute
+                left: 0
+                top: 25%
+            h1 
+                text-align: right
+                margin-top: 50px
+                font-size: 2.5em 
+                max-width: 300px
+                text-transform: uppercase
+                font-family: 'Helvetica medium'    
+                small 
+                    font-weight: bold 
+                    color: $green
+                    font-size: 1em
+            span 
+                text-align: right
+                margin-top: 20px
+                font-size: 1.5em 
+                line-height: 1.2
+            .more
+                display: flex
+                align-items: center
+                text-decoration: none
+                margin-top: 30px
+                color: $dark
+                font-size: 1.5em
+                font-family: 'Helvetica medium'
+                font-weight: bold
+                &:hover
+                    color: $green
+                hr 
+                    margin-left: 10px
+                    width: 20px 
+                    height: 2px 
+                    border: 0
+                    background: $dark
+    .block-2
+        width: 100%
+        min-height: 100vh 
+        display: flex
+        .content-wrapper
+            width: 100%
+            min-height: 100%
+            display: flex
+            flex-direction: column 
+            align-items: flex-start
+            padding-top: 250px
+            padding: 250px 40px 0 40px 
+            position: relative
+            overflow: hidden
+            .green-1
+                position: absolute 
+                right: -30px
+                bottom: 25%
+                transform: rotate(-60deg)
+            .green-4
+                position: absolute
+                left: -40px
+                top: 20%
+                transform: rotate(180deg)
+            h1 
+                text-align: left
+                margin-top: 50px
+                font-size: 2.5em 
+                max-width: 300px
+                text-transform: uppercase
+                font-family: 'Helvetica medium'  
+                small 
+                    font-weight: bold 
+                    color: $green
+                    font-size: 1em
+            .advantages
+                margin-top: 10px
+                display: flex
+                flex-direction: column 
+                .advantage
+                    margin-top: 20px
+                    display: flex
+                    align-items: center
+                    i 
+                        font-size: 5em
+                    .text
+                        margin-left: 20px
+                        h2 
+                            font-size: 2em
+                        small 
+                            display: inline-block
+                            font-size: 1.2em
+                            margin-top: 5px
+                    &:nth-child(1)
+                        i 
+                            color: $green
+                    &:nth-child(2)
+                        i 
+                            color: #DB9D32
+                    &:nth-child(3)
+                        i 
+                            color: #AE30DD
+                            transform: scale(-1,1)
+            .more
+                display: flex
+                align-items: center
+                text-decoration: none
+                margin-top: 30px
+                color: $dark
+                font-size: 1.5em
+                font-family: 'Helvetica medium'
+                font-weight: bold
+                &:hover
+                    color: $green
+                hr 
+                    margin-right: 10px
+                    width: 20px 
+                    height: 2px 
+                    border: 0
+                    background: $dark
+    .block-3
+        width: 100%
+        min-height: 100vh 
+        display: flex
+        .content-wrapper
+            width: 100%
+            min-height: 100%
+            display: flex
+            flex-direction: column 
+            align-items: center
+            padding: 100px 40px 0 40px 
+            position: relative
+            overflow: hidden
+            .green-1
+                position: absolute 
+                right: -50px
+                bottom: 25%
+                transform: rotate(-60deg)
+            .green-4
+                position: absolute
+                left: -40px
+                top: 20%
+                transform: rotate(180deg)
+            h1 
+                text-align: center
+                margin-top: 0px
+                font-size: 2.5em 
+                max-width: 100%
+                text-transform: uppercase
+                font-family: 'Helvetica medium'  
+            .programs
+                margin-top: 50px
+                display: flex
+                flex-direction: column
+                .program
+                    padding: 10px
+                    margin: 30px 0
+                    height: 250px
+                    width: 300px
+                    max-width: 100%
+                    display: flex
+                    flex-direction: column 
+                    align-items: center
+                    justify-content: center
+                    i 
+                        font-size: 5em
+                    h2 
+                        margin-top: 10px
+                        font-size: 2em
+                        text-align: center
+                    span 
+                        display: inline-block
+                        font-size: 1.5em
+                        margin-top: 5px
+                        text-align: center
+                    &:nth-child(1)
+                        i 
+                            color: $green
+                        box-shadow: 0px 10px 22px 0px rgba($green, 0.4)
+                    &:nth-child(2)
+                        i 
+                            color: #3C3CBA
+                        box-shadow: 0px 10px 22px 0px rgba(#3C3CBA, 0.4)
+                    &:nth-child(3)
+                        i 
+                            color: #CD962D
+                        box-shadow: 0px 10px 22px 0px rgba(#CD962D, 0.4)
+    .contacts
+        width: 100%
+        min-height: 600px
+        display: flex
+        .content-wrapper
+            width: 100%
+            min-height: 100%
+            display: flex
+            flex-direction: column 
+            align-items: center
+            padding: 100px 40px 0 40px 
+            position: relative
+            h1 
+                text-align: center
+                margin-top: 0px
+                font-size: 2.5em 
+                max-width: 100%
+                font-family: 'Helvetica medium'  
+            .links
+                display: flex
+                flex-direction: column 
+                align-items: center
+                a
+                    margin-top: 30px
+                    display: flex
+                    text-align: center
+                    text-decoration: none
+                    font-size: 1.5em 
+                    color: $dark
+                    line-height: 1.2
+                    strong 
+                        color: $green
+                    i 
+                        margin-right: 10px
+            .link
+                position: absolute 
+                bottom: 20px
+                a
+                    text-decoration: none
+                    color: $dark 
+                    font-size: 1.5em
+    .block-4
+        width: 100%
+        min-height: 100vh 
+        display: flex
+        width: 100%
+        min-height: 100vh 
+        background: url('../img/menu.jpg') center no-repeat
+        background-size: cover
+        display: flex
+        .content-wrapper
+            width: 100%
+            min-height: 100%
+            background: rgba(#fff, .9)
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            position: relative
+            overflow: hidden
+            .green-1
+                position: absolute 
+                right: -40px
+                top: 30%
+            .green-4
+                position: absolute
+                left: -30px
+                bottom: 20%
+            .name
+                display: flex
+                flex-direction: row
+                align-items: center
+                position: absolute
+                top: 20px
+                .green-1
+                    width: 100px
+                    position: absolute
+                    top: -80px
+                    left: -80px
+                img 
+                    width: 2em
+                span 
+                    margin-top: 5px
+                    margin-left: 10px
+                    color: $dark
+                    font-family: 'Helvetica regular'
+                    font-size: 1.5em
+                    text-transform: uppercase
+                    position: relative
+                    small
+                        position: absolute
+                        top: 0px
+                        right: -15px
+                        font-size: 10px
+            small 
+                font-size: 1.5em
+            h1 
+                margin-top: 10px
+                font-size: 2.3em 
+                max-width: 300px
+                text-align: center
+                font-family: 'Helvetica medium'    
+                small 
+                    font-weight: bold 
+                    color: $green
+                    font-size: 1em
+            span 
+                margin-top: 50px 
+                font-size: 3em
+    .block-5
+        width: 100%
+        min-height: 400px
+        display: flex
+        .content-wrapper
+            width: 100%
+            min-height: 100%
+            display: flex
+            flex-direction: column 
+            align-items: center
+            padding: 150px 40px 0 20px 
+            position: relative
+            overflow: hidden
+            .green-1
+                position: absolute 
+                left: -20px
+                top: 20%
+            .green-4
+                position: absolute
+                right: -40px
+                bottom: 5%
+            span 
+                margin-top: 20px
+                font-size: 1.5em
+                line-height: 1.5em
+                small 
+                    font-size: 1em 
+                    color: $green
+                    font-style: normal 
+                    margin-top: 0
+            small 
+                margin-top: 20px
+                font-size: 1.2em 
+                font-style: italic
+    .block-6
+        width: 100%
+        min-height: 550px
+        display: flex
+        .content-wrapper
+            width: 100%
+            min-height: 100%
+            display: flex
+            flex-direction: column 
+            align-items: flex-start
+            padding: 150px 40px 0 20px 
+            position: relative
+            overflow: hidden
+            .details 
+                max-width: 60%
+                h2 
+                    font-size: 1.2em
+                .programs
+                    margin-top: 10px
+                    display: flex
+                    flex-direction: column
+                    .program 
+                        margin-top: 20px
+                        display: flex
+                        align-items: center
+                        i 
+                            font-size: 3em
+                        .text 
+                            h2 
+                                font-size: 1.2em 
+                            span 
+                                display: inline-block
+                                margin-top: 5px
+                                font-size: 1em
+                        &:nth-child(1)
+                            i 
+                                color: $green
+                            .text
+                                margin-left: 18px
+                        &:nth-child(2)
+                            i 
+                                color: #3C3CBA
+                            .text
+                                margin-left: 23px
+                        &:nth-child(3)
+                            i 
+                                color: #CD962D
+                            .text
+                                margin-left: 10px
+            .wiki
+                position: absolute
+                right: -10px
+            .more
+                display: flex
+                align-items: center
+                text-decoration: none
+                margin-top: 30px
+                color: $dark
+                font-size: 1em
+                font-family: 'Helvetica medium'
+                font-weight: bold
+                &:hover
+                    color: $green
+                hr 
+                    margin-right: 10px
+                    width: 20px 
+                    height: 2px 
+                    border: 0
+                    background: $dark
 @media (max-width: 500px)
     body 
-        a 
-            .in-dev
-                background: url('../in-dev-m.png') center no-repeat
+        .top-fixed
+            top: 20px
+            left: 20px
+            z-index: 101
+            position: fixed
+            display: flex
+            flex-direction: column
+            strong 
+                font-size: 6em 
+                color: #000 
+                small 
+                    color: $green 
+                    font-size: 1em
+            small 
+                font-size: 2em
+        .left-menu
+            width: 100%
+            height: 120px
+            top: 0
+            align-items: flex-end
+            justify-content: flex-start
+            padding-top: 40px
+            padding-right: 50px
+            a 
+                display: none
+                &:nth-child(2)
+                    display: inline-block
+                    font-size: 5em
+        .menu 
+            margin-left: 0
+            justify-content: flex-end
+            padding-right: 50px
+            .close-menu
+                right: 25px
+                top: 20px
+                font-size: 50px
+            .links
+                text-align: right
+                margin-left: 50px
+                a 
+                    font-size: 3em
+            .img 
+                display: none
+            .menu-bottom
+                right: 60px
+                left: auto
+                .green-1
+                    display: none
+
+@media (max-width: 360px)
+    body 
+        .menu 
+            .links 
+                a 
+                    font-size: 2.5em
+        .block-1
+            .content-wrapper
+                h1 
+                    font-size: 2.2em
+        .block-2
+            .content-wrapper
+                h1 
+                    font-size: 2.2em
+        .block-3
+            .content-wrapper
+                h1 
+                    font-size: 2.2em
+        .block-6
+            .content-wrapper
+                .details
+                    max-width: 130px
+                    .programs
+                        .program
+                            i 
+                                display: none
+                            &:nth-child(1)
+                                .text
+                                    margin-left: 0
+                            &:nth-child(2)
+                                .text
+                                    margin-left: 0
+                            &:nth-child(3)
+                                .text
+                                    margin-left: 0
