@@ -353,7 +353,7 @@ body .block-1 .content-wrapper {
 body .block-1 .content-wrapper .green-1 {
   position: absolute;
   right: 0;
-  bottom: 25%;
+  bottom: 15%;
 }
 
 body .block-1 .content-wrapper .green-4 {
@@ -950,6 +950,7 @@ body .block-6 .content-wrapper {
 
 body .block-6 .content-wrapper .details {
   max-width: 60%;
+  padding-right: 10px;
 }
 
 body .block-6 .content-wrapper .details h2 {
@@ -1016,8 +1017,9 @@ body .block-6 .content-wrapper .details .programs .program:nth-child(3) .text {
 }
 
 body .block-6 .content-wrapper .wiki {
+  width: 180px;
   position: absolute;
-  right: -10px;
+  right: -15px;
 }
 
 body .block-6 .content-wrapper .more {
