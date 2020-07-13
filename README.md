@@ -1,8 +1,6 @@
 # mycityfarm
 //ru
 
-Проект разрабатывается в рамках конкурса MAKSERCASE
-
 Структура папок:
 - MyCityFarm: главные страницы сайта, находящиеся на домене https://mycityfarm.ru (HTML5 вёрстка)
 - cabinet - личный кабинет, находящийся на поддомене https://cabinet.mycityfarm.ru (логика реализована на PHP 7.3 с использованием Базы Данных MySQL 5.6)
@@ -14,8 +12,6 @@
 
 
 //en
-
-The project is being developed as part of the MAKSERCASE contest
 
 Folder structure:
 - MyCityFarm: the main pages of the site located on the domain https://mycityfarm.ru (HTML5 layout)
